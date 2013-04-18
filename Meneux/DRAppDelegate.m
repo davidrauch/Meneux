@@ -65,7 +65,7 @@
 	DOMDocument* domDocument=[sender mainFrameDocument];
 	DOMElement* styleElement=[domDocument createElement:@"style"];
 	[styleElement setAttribute:@"type" value:@"text/css"];
-	DOMText* cssText=[domDocument createTextNode:@"body>footer, body>header,  #lists{display:none !important} #calendar{margin-top: 10px !important}"];
+	DOMText* cssText=[domDocument createTextNode:@"body>footer, .header-bar,  #lists{display:none !important} #calendar{margin-top: 10px !important}"];
 	[styleElement appendChild:cssText];
 	DOMElement* headElement=(DOMElement*)[[domDocument getElementsByTagName:@"head"] item:0];
 	[headElement appendChild:styleElement];
